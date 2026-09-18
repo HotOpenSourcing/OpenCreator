@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "prebuild": "pnpm krillinai:build",
-    "build": "pnpm -r build",
+    "build": "node init && pnpm -r build",
     "test": "pnpm -r test",
     "e2e": "playwright test",
     "perf:measure": "playwright test apps/web/e2e/scheduled-task-performance.spec.ts",
@@ -29,6 +29,8 @@
   "devDependencies": {
     "@playwright/test": "^1.61.1",
     "@types/node": "^22.10.7",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^3.3.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.3",
     "vitest": "^3.2.7"
